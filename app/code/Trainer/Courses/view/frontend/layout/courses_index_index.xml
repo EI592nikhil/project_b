@@ -1,0 +1,17 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd"> 
+<update handle="customer_account"/> 
+	<body> 
+	<referenceBlock name="page.main.title">
+		<action method="setPageTitle"><argument translate="true" name="title" xsi:type="string">Add Course</argument></action>
+	</referenceBlock> 
+	<!--<referenceContainer name="content"> 
+		<block class="Magento\Framework\View\Element\Template" name="my_course" template="Trainer_Courses::my_course.phtml"></block>
+	</referenceContainer>
+	<referenceContainer name="content"> 
+		<block class="Magento\Framework\View\Element\Template" name="my_study_material" template="Trainer_Courses::my_study_material.phtml"></block>
+	</referenceContainer>-->
+	<referenceContainer name="content"> 
+		<block class="Trainer\Courses\Block\Index\Index" name="add_course" template="Trainer_Courses::add_course.phtml"></block>
+	</referenceContainer>
+	</body> 
+</page>

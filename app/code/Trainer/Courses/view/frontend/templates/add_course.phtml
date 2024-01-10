@@ -1,0 +1,64 @@
+<?php
+/**
+ * Copyright © 2016 Trainercommerce. All rights reserved.
+ */
+?>
+<?php
+/**
+ * {{controller}} {{action}} template
+ *
+ * @var $block \Trainer\Courses\Block\Index\Index
+ */
+?>
+<!-- update content from Courses\view\frontend\templates\index\form.phtml -->
+<form class="form Courses" action="<?php /* @escapeNotVerified */echo $block->getFormAction(); ?>" id="Courses-form"
+    method="post" data-hasrequired="* Required Fields" data-mage-init='{"validation":{}}'>
+    <fieldset class="fieldset">
+        <!-- <legend class="legend"><span>Trainer Course form</span></legend><br /> -->
+        <div class="field note no-label">Fill all the required course details</div>
+        <div class="field name required">
+            <label class="label" for="name"><span>Course Name</span></label>
+            <div class="control">
+                <input name="name" id="name" title="Name"
+                    value="<?php echo $block->escapeHtml($this->helper('Trainer\Courses\Helper\Data')->getUserName()) ?>"
+                    class="input-text" type="text" data-validate="{required:true}" />
+            </div>
+        </div>
+        <div class="field name required">
+            <label class="label" for="url"><span>Course URL</span></label>
+            <div class="control">
+                <input name="url" id="url" title="Url"
+                    value="<?php echo $block->escapeHtml($this->helper('Trainer\Courses\Helper\Data')->getUserEmail()) ?>"
+                    class="input-text" type="text" />
+            </div>
+        </div>
+        <div class="field name required">
+            <label class="label" for="url"><span>Course File</span></label>
+            <div class="input-field-box">
+                <input accept="image/*" name="document" accept=".jpg,.jpeg,.png" type="file" value="" />
+            </div>
+        </div>
+        <!-- <div class="field email required">
+            <label class="label" for="email"><span>Customer Email</span></label>
+            <div class="control">
+                <input name="email" id="email" title="Email"
+                    value="<?php //echo $block->escapeHtml($this->helper('Trainer\Courses\Helper\Data')->getUserEmail()) ?>"
+                    class="input-text" type="email" data-validate="{required:true, 'validate-email':true}" />
+            </div>
+        </div> -->
+        <!-- <div class="field mobile">
+            <label class="label" for="mobile"><span>Mobile Number</span></label>
+            <div class="control">
+                <input name="mobile" id="mobile" title="Mobile Number" value="" class="input-text" type="text" />
+            </div>
+        </div> -->
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <input type="hidden" name="hideit" id="hideit" value="" />
+            <button type="submit" title="Submit" class="action submit primary">
+                <span>Submit Course for Approval</span>
+            </button>
+        </div>
+    </div>
+</form>
