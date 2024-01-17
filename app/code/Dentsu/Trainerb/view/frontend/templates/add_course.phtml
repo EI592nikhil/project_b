@@ -1,0 +1,68 @@
+<?php
+/**
+ * Copyright © 2016 Trainercommerce. All rights reserved.
+ */
+?>
+<?php
+/**
+ * {{controller}} {{action}} template
+ *
+ * @var $block \Dentsu\Trainerb\Block\Index\Index
+ */
+?>
+<!-- update content from Courses\view\frontend\templates\index\form.phtml -->
+<form class="form Courses" action="<?php /* @escapeNotVerified */echo $block->getFormAction(); ?>" id="Courses-form"
+    method="post" data-hasrequired="* Required Fields" enctype="multipart/form-data" data-mage-init='{"validation":{}}'>
+    <fieldset class="fieldset">
+        <!-- <legend class="legend"><span>Trainer Course form</span></legend><br /> -->
+        <div class="field note no-label">Fill all the required course details</div>
+        <div class="field name required">
+            <label class="label" for="course_name"><span>Course Name</span></label>
+            <div class="control">
+                <input name="course_name" id="course_name" title="Course Name"
+                    value="<?php //echo $block->escapeHtml($this->helper('Trainer\Courses\Helper\Data')->getUserName()) ?>"
+                    class="input-text" type="text" data-validate="{required:true}" />
+            </div>
+        </div>
+        <div class="field name">
+            <label class="label" for="url"><span>Course URL</span></label>
+            <div class="control">
+                <input name="course_url" id="course_url" title="Course URL"
+                    value="<?php //echo $block->escapeHtml($this->helper('Trainer\Courses\Helper\Data')->getUserEmail()) ?>"
+                    class="input-text" type="text" />
+            </div>
+        </div>
+        <div class="field name">
+            <label class="label" for="course_attachment"><span>Course File</span></label>
+            <div class="control">
+                <!-- <input accept="image/*,video/mp4,video/x-m4v,video/*,.pdf, .doc, .docx" multiple="multiple"
+                    name="course_attachment" type="file" value="" /> -->
+                <input id="course_attachment" name="course_attachment" class="input-file" type="file"
+                    multiple="multiple" />
+            </div>
+        </div>
+        <!-- <div class="field email required">
+            <label class="label" for="email"><span>Customer Email</span></label>
+            <div class="control">
+                <input name="email" id="email" title="Email"
+                    value="<?php //echo $block->escapeHtml($this->helper('Trainer\Courses\Helper\Data')->getUserEmail()) ?>"
+                    class="input-text" type="email" data-validate="{required:true, 'validate-email':true}" />
+            </div>
+        </div> -->
+        <!-- <div class="field mobile">
+            <label class="label" for="mobile"><span>Mobile Number</span></label>
+            <div class="control">
+                <input name="mobile" id="mobile" title="Mobile Number" value="" class="input-text" type="text" />
+            </div>
+        </div> -->
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <input type="hidden" name="approval_flag" id="hideit" value="0" />
+            <input type="submit" name="submit" title="Submit" value="Submit Course for Approval"
+                class="action submit primary">
+            <!-- <span>Submit Course for Approval</span> -->
+            <!-- </button> -->
+        </div>
+    </div>
+</form>
