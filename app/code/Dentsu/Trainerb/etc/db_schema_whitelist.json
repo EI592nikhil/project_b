@@ -1,0 +1,19 @@
+{
+    "tables": {
+        "trainer_course": true
+    },
+    "trainer_course": {
+        "column": {
+            "id": true,
+            "course_name": true,
+            "course_url": true,
+            "course_attachment": true,
+            "approval_flag": true,
+            "customer_id": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "TRAINER_COURSE_CUSTOMER_ID_CUSTOMER_ENTITY_ENTITY_ID": true
+        }
+    }
+}
