@@ -8,5 +8,21 @@
 				</arguments>
 			</block>
 		</referenceBlock>
+      <referenceBlock name="customer_account_navigation">
+            <block class="Magento\Customer\Block\Account\SortLinkInterface" name="customer-account-navigation-studymaterials">
+                <arguments>
+                    <argument name="path" xsi:type="string">studymaterials/index/index</argument>
+                    <argument name="label" xsi:type="string">Study Materials</argument>
+                    <argument name="sortOrder" xsi:type="number">216</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="customer-account-navigation-downloadable-products-link">
+           <arguments>
+               <argument name="label" xsi:type="string" translate="true">My Courses</argument>
+               <argument name="sortOrder" xsi:type="number">217</argument>
+           </arguments>
+       </referenceBlock>
+
 	</body>
 </page>
