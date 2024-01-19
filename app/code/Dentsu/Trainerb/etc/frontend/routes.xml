@@ -10,6 +10,5 @@
          <route frontName="studymaterials" id="studymaterials">
             <module name="Dentsu_Trainerb"/>
          </route>
-
 	</router>
 </config>

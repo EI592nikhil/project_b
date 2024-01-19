@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Dentsu::top_level" title="Dentsu" module="Dentsu_Trainerb" sortOrder="9999" resource="Magento_Backend::content"/>
+		<add id="Dentsu_Trainerb::redirect_index" title="redirect index" module="Dentsu_Trainerb" sortOrder="9999" resource="Dentsu_Trainerb::redirect_index" parent="Dentsu::top_level" action="customer/redirect/index"/>
+	</menu>
+</config>

@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-/**
- * Created By : Sumit Sharma.
- */
--->
+
 <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
-   <table name="trainer_course" resource="default" engine="innodb" comment="Trainer Course">
-      <column xsi:type="smallint" name="id" padding="7" unsigned="false" nullable="false" identity="true" comment="ID" />
-      <column xsi:type="varchar" name="course_name" nullable="false" length="20" comment="Course Name" />
-      <column xsi:type="varchar" name="course_url" nullable="false" length="20" comment="Course URL" />
-      <column xsi:type="varchar" name="course_attachment" nullable="false" length="255" comment="Course Attachment" />
-      <column xsi:type="smallint" name="approval_flag" padding="7" unsigned="false" nullable="false" comment="Approval Flag" />
-      <constraint xsi:type="primary" referenceId="PRIMARY">
-         <column name="id" />
-      </constraint>
-   </table>
+    <table name="trainer_course" resource="default" engine="innodb" comment="Trainer Course">
+        <column xsi:type="smallint" name="id" padding="7" unsigned="false" nullable="false" identity="true" comment="ID" />
+        <column xsi:type="varchar" name="course_name" nullable="false" length="20" comment="Course Name" />
+        <column xsi:type="varchar" name="course_url" nullable="false" length="20" comment="Course URL" />
+        <column xsi:type="varchar" name="course_attachment" nullable="false" length="255" comment="Course Attachment" />
+        <column xsi:type="smallint" name="approval_flag" padding="7" unsigned="false" nullable="false" comment="Approval Flag" />
+        <!-- <column xsi:type="int" name="customer_id" nullable="false" unsigned="true" comment="Customer ID from the customer entity table" /> -->
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id" />
+        </constraint>
+        <!-- <constraint xsi:type="foreign" referenceId="TRAINER_COURSE_CUSTOMER_ID_CUSTOMER_ENTITY_ENTITY_ID" table="trainer_course" column="customer_id" referenceTable="customer_entity" referenceColumn="entity_id" onDelete="CASCADE"/> -->
+    </table>
 </schema>
