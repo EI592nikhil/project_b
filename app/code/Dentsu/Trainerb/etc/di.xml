@@ -3,4 +3,7 @@
     <type name="Magento\Customer\Model\Account\Redirect">
         <plugin name="NewAcctRedirectPlug" type="Dentsu\Trainerb\Plugin\Frontend\RegisterRedirect" disabled="false" sortOrder="1"/>
     </type>
+    <type name="Magento\Customer\Model\Account\Redirect">
+        <plugin name="Dentsu_Trainerb_customer_login_redirect" type="Dentsu\Trainerb\Plugin\RedirectPlugin" sortOrder="10"/>
+    </type>
 </config>

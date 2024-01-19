@@ -4,5 +4,8 @@
 		<route frontName="courses" id="courses">
 			<module name="Dentsu_Trainerb"/>
 		</route>
+		<route id="customer" frontName="customer">
+			<module name="Dentsu_Trainerb"/>
+		</route>
 	</router>
 </config>
