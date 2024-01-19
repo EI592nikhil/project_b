@@ -6,8 +6,12 @@ namespace Dentsu\Trainerb\Helper;
 
 use Magento\Customer\Api\Data\CustomerInterface;
 use Magento\Customer\Helper\View as CustomerViewHelper;
+use Magento\Authorization\Model\UserContextInterface;
+use Magento\Framework\App\Helper\AbstractHelper;
+use Magento\Framework\App\Helper\Context;
+ 
 
-class Data extends \Magento\Framework\App\Helper\AbstractHelper
+class Data extends AbstractHelper
 {
     const XML_PATH_ENABLED = 'ecommerce/ecommerce/enabled';
     /**
@@ -25,14 +29,21 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      * @param \Magento\Customer\Model\Session $customerSession
      * @param CustomerViewHelper $customerViewHelper
      */
+
+     protected $userContext;
+
+
     public function __construct(
         \Magento\Framework\App\Helper\Context $context,
         \Magento\Customer\Model\Session $customerSession,
-        CustomerViewHelper $customerViewHelper
+        CustomerViewHelper $customerViewHelper,
+        Context $context,
+        UserContextInterface $userContext
     ) {
         $this->_customerSession = $customerSession;
         $this->_customerViewHelper = $customerViewHelper;
-        parent::__construct($context);
+        $this->userContext = $userContext;
+        parent::__construct($context);  
     }
     /**
      * Check if enabled
@@ -77,5 +88,11 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
          */
         $customer = $this->_customerSession->getCustomerDataObject();
         return $customer->getEmail();
+    }
+
+    public function getLoginCustomerId()
+    {
+        $customerId = $this->userContext->getUserId();
+        return $customerId;
     }
 }

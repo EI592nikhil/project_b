@@ -52,6 +52,7 @@ class Index extends \Magento\Framework\App\Action\Action
 	public function execute()
 	{
 		$this->_view->loadLayout();
+		$this->_view->renderLayout(); // gourav
 		$this->_view->getLayout()->initMessages();
 		$this->_view->getPage()->getConfig()->getTitle()->set(__('Add Course'));
 		/** @var \Magento\Framework\View\Result\Page $resultPage */

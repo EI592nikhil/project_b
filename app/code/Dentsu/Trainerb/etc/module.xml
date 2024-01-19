@@ -3,6 +3,7 @@
     <module name="Dentsu_Trainerb" setup_version="1.0.0" schema_version="1.0.2">
         <sequence>
             <module name="Magento_Customer"/>
+            <module name="Magento_Downloadable"/>
         </sequence>
     </module>
 </config>
