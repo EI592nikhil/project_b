@@ -34,7 +34,7 @@ class Data extends AbstractHelper
 
 
     public function __construct(
-        \Magento\Framework\App\Helper\Context $context,
+        // \Magento\Framework\App\Helper\Context $context,
         \Magento\Customer\Model\Session $customerSession,
         CustomerViewHelper $customerViewHelper,
         Context $context,
